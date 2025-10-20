@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adrian Abdullahu – Portfolio</title>
+  <meta name="description" content="Portfolio – Web Development, UI Design, Performance Engineering." />
+  <meta property="og:title" content="Adrian Abdullahu – Portfolio" />
+  <meta property="og:description" content="Portfolio – Web Development, UI Design, Performance Engineering." />
+  <meta property="og:image" content="/social.png" />
+  <meta property="og:url" content="https://adrian1921677.github.io/Adrian_Abdullahu/" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://adrian1921677.github.io/Adrian_Abdullahu/" />
+  <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles/base.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/components.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a class="brand" href="/">Adrian&nbsp;Abdullahu</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Navigation umschalten">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <ul id="nav-menu" class="nav__list" data-cq="nav">
+        <li><a href="#work">Projekte</a></li>
+        <li><a href="#about">Über mich</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" data-animate>
+      <h1>
+        <span class="tag">Portfolio</span> 
+        Sauberes Web-Engineering, ohne Ballast.
+      </h1>
+      <p>Performance, Accessibility, dezente Micro-Interaktionen. Moderne Browser-APIs statt schwerer Frameworks.</p>
+      <a class="btn btn--primary" href="#work">Projekte ansehen</a>
+    </section>
+
+    <section id="work" class="work-section" data-animate>
+      <h2>Projekte</h2>
+      <div class="grid">
+        <article class="card" data-animate>
+          <figure class="card__image">
+            <picture>
+              <source srcset="/img/project-1.avif" type="image/avif">
+              <source srcset="/img/project-1.webp" type="image/webp">
+              <img src="/img/project-1.jpg" alt="E-Commerce Dashboard Screenshot" loading="lazy" decoding="async">
+            </picture>
+          </figure>
+          <div class="card__content">
+            <h3>E-Commerce Dashboard</h3>
+            <p>React-basiertes Admin-Panel mit real-time Analytics und modernem Design System.</p>
+            <div class="card__tags">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">D3.js</span>
+            </div>
+            <a href="#" class="btn btn--ghost">Details ansehen</a>
+          </div>
+        </article>
+
+        <article class="card" data-animate>
+          <figure class="card__image">
+            <picture>
+              <source srcset="/img/project-2.avif" type="image/avif">
+              <source srcset="/img/project-2.webp" type="image/webp">
+              <img src="/img/project-2.jpg" alt="Mobile App Interface" loading="lazy" decoding="async">
+            </picture>
+          </figure>
+          <div class="card__content">
+            <h3>Mobile Banking App</h3>
+            <p>Native iOS/Android App mit biometrischer Authentifizierung und Offline-Funktionalität.</p>
+            <div class="card__tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+            <a href="#" class="btn btn--ghost">Details ansehen</a>
+          </div>
+        </article>
+
+        <article class="card" data-animate>
+          <figure class="card__image">
+            <picture>
+              <source srcset="/img/project-3.avif" type="image/avif">
+              <source srcset="/img/project-3.webp" type="image/webp">
+              <img src="/img/project-3.jpg" alt="Web Performance Dashboard" loading="lazy" decoding="async">
+            </picture>
+          </figure>
+          <div class="card__content">
+            <h3>Performance Monitor</h3>
+            <p>Real-time Web Vitals Tracking mit automatischen Alerts und detaillierten Reports.</p>
+            <div class="card__tags">
+              <span class="tag">Vue.js</span>
+              <span class="tag">Web Vitals</span>
+              <span class="tag">WebSockets</span>
+            </div>
+            <a href="#" class="btn btn--ghost">Details ansehen</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about" data-animate>
+      <div class="about__content">
+        <h2>Über mich</h2>
+        <p class="about__intro">
+          Frontend-Entwickler mit Fokus auf Performance und User Experience. 
+          Spezialisiert auf moderne Web-Technologien und saubere, wartbare Codebases.
+        </p>
+        <div class="about__stats">
+          <div class="stat">
+            <span class="stat__number">5+</span>
+            <span class="stat__label">Jahre Erfahrung</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">50+</span>
+            <span class="stat__label">Projekte umgesetzt</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">98%</span>
+            <span class="stat__label">Lighthouse Score</span>
+          </div>
+        </div>
+        <div class="about__skills">
+          <h3>Technologien</h3>
+          <div class="skills-grid">
+            <span class="skill">JavaScript/TypeScript</span>
+            <span class="skill">React/Vue.js</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">CSS/SCSS</span>
+            <span class="skill">Web Performance</span>
+            <span class="skill">Accessibility</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" data-animate>
+      <h2>Kontakt</h2>
+      <div class="contact__content">
+        <div class="contact__info">
+          <p>Lass uns über dein nächstes Projekt sprechen!</p>
+          <div class="contact__links">
+            <a href="mailto:adrian@example.com" class="contact__link">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              adrian@example.com
+            </a>
+            <a href="https://github.com/adrian1921677" class="contact__link" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77a5.07 5.07 0 0 0-1.5-3.5 4.9 4.9 0 0 0-.13-3.5s-1.3-.35-4.25 1.6a14.5 14.5 0 0 0-7.5 0C3.25 1.35 1.95 1.7 1.95 1.7a4.9 4.9 0 0 0-.13 3.5A5.07 5.07 0 0 0 1 4.77a5.44 5.44 0 0 0-1.5 3.5c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 0 0-.94 2.61V22"/>
+              </svg>
+              GitHub
+            </a>
+            <a href="https://linkedin.com/in/adrian-abdullahu" class="contact__link" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        
+        <form class="contact__form" action="mailto:adrian@example.com" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Nachricht</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">Nachricht senden</button>
+        </form>
+      </div>
+      <p class="form-fallback">Kein JavaScript nötig. Später kann ein kleiner Fetch-Endpoint ergänzt werden.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Adrian Abdullahu. Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

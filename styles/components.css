@@ -1,0 +1,306 @@
+/* Component Styles */
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: var(--text-base);
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.btn--primary {
+  background: var(--brand);
+  color: white;
+  border-color: var(--brand);
+}
+
+.btn--primary:hover {
+  background: var(--brand-light);
+  border-color: var(--brand-light);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--fg);
+  border-color: var(--border);
+}
+
+.btn--ghost:hover {
+  background: var(--surface);
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+/* Button ripple effect */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.btn:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  background: var(--surface);
+  color: var(--brand);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  position: relative;
+  container-type: inline-size;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--brand);
+}
+
+.card__image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-slow);
+}
+
+.card:hover .card__image img {
+  transform: scale(1.05);
+}
+
+.card__content {
+  padding: var(--space-6);
+}
+
+.card h3 {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-xl);
+  color: var(--fg);
+}
+
+.card p {
+  margin-bottom: var(--space-4);
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.card__tags .tag {
+  font-size: var(--text-xs);
+  padding: var(--space-1) var(--space-2);
+}
+
+/* Container queries for cards */
+@container (min-width: 300px) {
+  .card__content {
+    padding: var(--space-8);
+  }
+}
+
+/* Form elements */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--fg);
+  font-size: var(--text-sm);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--fg);
+  font-family: inherit;
+  font-size: var(--text-base);
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand) 20%, transparent);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-fallback {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin-top: var(--space-4);
+  font-style: italic;
+}
+
+/* Loading states */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Focus management */
+.skip:focus {
+  top: var(--space-2);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --border: var(--fg);
+    --muted: var(--fg);
+  }
+  
+  .btn--ghost {
+    border-width: 2px;
+  }
+  
+  .card {
+    border-width: 2px;
+  }
+}
+
+/* Dark mode specific adjustments */
+@media (prefers-color-scheme: dark) {
+  .card:hover {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 10px 10px -5px rgb(0 0 0 / 0.1);
+  }
+}
+
+/* Light mode specific adjustments */
+@media (prefers-color-scheme: light) {
+  .card:hover {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+  }
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Micro-interactions */
+.btn,
+.card,
+.contact__link {
+  will-change: transform;
+}
+
+/* Performance optimizations */
+.card__image img {
+  will-change: transform;
+}
+
+/* Print styles for components */
+@media print {
+  .btn {
+    border: 1px solid #000;
+    background: transparent !important;
+    color: #000 !important;
+  }
+  
+  .card {
+    border: 1px solid #000;
+    break-inside: avoid;
+  }
+  
+  .contact__form {
+    display: none;
+  }
+}
