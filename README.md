@@ -1,105 +1,113 @@
 # Adrian Abdullahu - Portfolio
 
-Eine moderne, performante Portfolio-Website ohne Frameworks - nur HTML, CSS und Vanilla JavaScript.
+Eine moderne, hochperformante Portfolio-Website mit dem TALL-Stack (TailwindCSS, Alpine.js, Laravel, Livewire) plus Three.js für 3D-Animationen und Lenis für sanftes Scrolling.
 
 ## 🚀 Features
 
-- **Pur HTML/CSS/JS** - Keine Frameworks, keine Build-Tools
-- **Moderne Browser-APIs** - View Transitions, IntersectionObserver, Container Queries
-- **Performance-optimiert** - Lazy Loading, optimierte Bilder, minimale JavaScript
-- **Accessibility** - WCAG 2.1 AA konform, Screen Reader freundlich
-- **Responsive Design** - Mobile-first, Container Queries
-- **Dark/Light Mode** - Automatische Erkennung der Systemeinstellungen
-- **SEO-optimiert** - Semantisches HTML, Meta-Tags, Sitemap
+- **TALL Stack**: Modernes Full-Stack-Framework mit Laravel und Livewire
+- **Three.js**: Interaktive 3D-Particle-Animationen im Hintergrund
+- **Lenis**: Sanftes, butterweiches Scrolling
+- **Alpine.js**: Lightweight JavaScript für Interaktivität
+- **TailwindCSS**: Utility-first CSS Framework
+- **Responsive Design**: Perfekt auf allen Geräten
+- **Performance**: Optimiert für Speed und Lighthouse-Scores
+- **Accessibility**: Barrierefreies Design
 
-## 🛠 Technologie-Stack
+## 🛠️ Technologien
 
-- **HTML5** - Semantische Struktur, ARIA-Labels
-- **CSS3** - Custom Properties, Container Queries, `:has()` Selector
-- **Vanilla JavaScript** - ES6 Modules, IntersectionObserver, View Transitions API
-- **Optimierte Assets** - AVIF/WebP Bilder, Variable Fonts
+- Laravel 11
+- Livewire 3
+- Alpine.js 3
+- TailwindCSS 3
+- Three.js
+- Lenis Smooth Scroll
+- Vite
+
+## 📦 Installation
+
+### Voraussetzungen
+
+- PHP 8.2+
+- Composer
+- Node.js & npm
+
+### Setup
+
+1. **Dependencies installieren:**
+
+```bash
+composer install
+npm install
+```
+
+2. **Umgebungsvariablen konfigurieren:**
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+3. **Development Server starten:**
+
+```bash
+# Terminal 1: Laravel
+php artisan serve
+
+# Terminal 2: Vite
+npm run dev
+```
+
+4. **Projekt besuchen:**
+   - Öffne http://localhost:8000 im Browser
+
+## 🏗️ Build für Production
+
+```bash
+npm run build
+```
 
 ## 📁 Projektstruktur
 
 ```
-/
-├── index.html              # Haupt-HTML-Datei
-├── styles/
-│   ├── base.css           # Reset, Tokens, Utilities
-│   ├── layout.css         # Grid, Flexbox, Layout
-│   └── components.css     # Buttons, Cards, Forms
-├── js/
-│   └── main.js           # Haupt-JavaScript-Modul
-├── img/                  # Optimierte Bilder (AVIF/WebP)
-├── icons/                # SVG-Sprites
-├── favicon.svg           # SVG-Favicon
-├── sitemap.xml           # SEO-Sitemap
-├── robots.txt            # Crawler-Direktiven
-└── README.md
+├── app/
+│   └── Livewire/         # Livewire Komponenten
+├── resources/
+│   ├── css/              # TailwindCSS
+│   ├── js/               # JavaScript (Alpine.js, Three.js, Lenis)
+│   └── views/            # Blade Templates
+├── routes/               # Web Routes
+├── public/               # Öffentliche Assets
+└── config/               # Konfigurationsdateien
 ```
 
-## 🎨 Design-System
+## 🎨 Anpassung
 
-### Farben
-- **Primär**: `#8b5cf6` (Violet)
-- **Hintergrund**: `#0b0b0c` (Dark) / `#ffffff` (Light)
-- **Text**: `#e7e7ea` (Dark) / `#0b0b0c` (Light)
+### Farben ändern
 
-### Typografie
-- **Font**: Inter (Variable Font)
-- **Größen**: Fluid Typography mit `clamp()`
+Bearbeite `tailwind.config.js`:
 
-### Spacing
-- **Basis**: 4px Grid-System
-- **Responsive**: `clamp()` für flüssige Abstände
-
-## ⚡ Performance
-
-- **Lighthouse Score**: 98+ (Performance, Accessibility, SEO)
-- **Core Web Vitals**: Optimiert für LCP, FID, CLS
-- **Bundle Size**: < 10KB JavaScript, < 50KB CSS
-- **Lazy Loading**: Bilder und Animationen
-
-## 🔧 Entwicklung
-
-### Lokale Entwicklung
-```bash
-# Einfacher HTTP-Server
-python -m http.server 8000
-# oder
-npx serve .
+```js
+colors: {
+    brand: {
+        // Deine Farben
+    }
+}
 ```
 
-### Deployment
-- **GitHub Pages**: Automatisches Deployment
-- **Vercel**: Static Site Hosting
-- **Netlify**: Drag & Drop Deployment
+### Inhalte anpassen
 
-## 📱 Browser-Unterstützung
-
-- **Chrome/Edge**: 88+
-- **Firefox**: 87+
-- **Safari**: 14+
-- **Mobile**: iOS 14+, Android 8+
-
-## 🎯 Roadmap
-
-- [ ] Blog-Sektion hinzufügen
-- [ ] Projekt-Detail-Seiten
-- [ ] Kontakt-Formular Backend
-- [ ] Mehrsprachigkeit (EN/DE)
-- [ ] PWA-Features
+- **Hero-Section**: `resources/views/home.blade.php`
+- **Projekte**: Daten in `home.blade.php` anpassen
+- **3D-Animation**: `resources/js/three-scene.js`
 
 ## 📄 Lizenz
 
-MIT License - siehe [LICENSE](LICENSE) für Details.
+MIT License - fühle dich frei, das Projekt zu verwenden!
 
-## 🤝 Kontakt
+## 👤 Autor
 
-- **Email**: adrian@example.com
-- **GitHub**: [@adrian1921677](https://github.com/adrian1921677)
-- **LinkedIn**: [Adrian Abdullahu](https://linkedin.com/in/adrian-abdullahu)
+Adrian Abdullahu
 
 ---
 
-*Erstellt mit ❤️ und modernen Web-Standards*
+Made with ❤️ using the TALL Stack
